@@ -1,5 +1,5 @@
-## recli - RethinkDB command-line query tool and REPL
-*recli* is a command-line query tool and REPL for RethinkDB. It let’s you do things like
+## recli - RethinkDB CLI query tool and REPL
+**recli** is a command-line query tool and REPL for RethinkDB. It let’s you do things like
 ```
 $ recli 'r.table("bikes")'
 ... (JSON output) ...
