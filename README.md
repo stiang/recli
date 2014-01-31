@@ -20,9 +20,9 @@ recli> r.table("bikes").get("123").update({foo: "bar"})
 ### Installation
 Install recli using npm:
 ```
-npm install -g recli
+sudo npm install -g recli
 ```
-This will give you a global `recli` command. If you prefer to install it locally, just skip the "-g". 
+This will give you a global `recli` command. If you prefer to install it locally, just drop the "sudo" and "-g". 
 In that case, you can invoke it like so:
 ```
 node ./node_modules/recli/bin/recli.js
