@@ -26,6 +26,7 @@ This will give you a global `recli` command. If you prefer to install it locally
 In that case, you can invoke it like so:
 ```
 node ./node_modules/recli/bin/recli.js
+```
 
 ### Options
 You can specify the database, host and port to connect to. Use --help to get the full usage info:
