@@ -40,7 +40,7 @@ Usage: recli [options] [ReQL expression]
 
 REPL mode:
     If the ReQL expression is omitted, recli will enter REPL mode,
-    which is a CLI where you can execute ReQL statements.
+    which is a CLI where you can evaluate ReQL expressions.
 
 REQL EXPRESSION:
     A ReQL expression is anything that works in RethinkDB's Data
