@@ -25,7 +25,7 @@ sudo npm install -g recli
 This will give you a global `recli` command. If you prefer to install it locally, just drop the "sudo" and "-g". 
 In that case, you can invoke it like so:
 ```
-node ./node_modules/recli/bin/recli.js
+node ./node_modules/recli
 ```
 
 ### Options
