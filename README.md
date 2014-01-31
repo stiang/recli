@@ -60,3 +60,5 @@ OPTIONAL options:
 ### Author
 Stian Grytøyr
 
+### Licence
+[The MIT License](http://opensource.org/licenses/MIT)
