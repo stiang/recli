@@ -27,6 +27,10 @@ In that case, you can invoke it like so:
 ```
 node ./node_modules/recli
 ```
+or
+```
+./node_modules/recli/bin/recli.js
+```
 
 ### Options
 You can specify the database, host and port to connect to. Use `--help` to get the full usage info:
@@ -50,7 +54,6 @@ OPTIONAL options:
     -d, --database DATABASE    Default database to perform queries against.
                                Can be overridden in the ReQL expression.
                                The default is 'test'.
-
 
     -h, --host HOST            Host to connect to. The default is 'localhost'.
 
