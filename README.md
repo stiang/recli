@@ -56,3 +56,7 @@ OPTIONAL options:
 
     -p, --port PORT            TCP port to connect to. The default is 28015.
 ```
+
+### Author
+Stian Grytøyr
+
