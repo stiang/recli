@@ -29,7 +29,7 @@ node ./node_modules/recli/bin/recli.js
 ```
 
 ### Options
-You can specify the database, host and port to connect to. Use --help to get the full usage info:
+You can specify the database, host and port to connect to. Use `--help` to get the full usage info:
 ```
 $ recli --help
 Usage: reql [options] [ReQL expression]
