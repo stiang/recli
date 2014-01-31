@@ -32,11 +32,15 @@ exports.recli = function() {
             }
           });
         } else {
-          var local = repl.start({prompt: "recli> ",
-                                  eval:   misc.replEval});
-          local.context.r = r;
-          local.context.conn = conn;
-          local.context.db = opts.database;
+          var cli = repl.start({prompt: "recli> ",
+                                eval:   misc.replEval});
+          cli.context.r = r;
+          cli.context.conn = conn;
+          cli.context.db = opts.database;
+          cli.on('exit', function () {
+            console.log('');
+            process.exit();
+          });
         }
       }
     });
