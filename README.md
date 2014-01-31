@@ -32,10 +32,10 @@ node ./node_modules/recli
 You can specify the database, host and port to connect to. Use `--help` to get the full usage info:
 ```
 $ recli --help
-Usage: reql [options] [ReQL expression]
+Usage: recli [options] [ReQL expression]
 
 REPL mode:
-    If the ReQL expression is omitted, reql will enter REPL mode,
+    If the ReQL expression is omitted, recli will enter REPL mode,
     which is a CLI where you can execute ReQL statements.
 
 REQL EXPRESSION:
