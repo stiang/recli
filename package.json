@@ -1,0 +1,30 @@
+{
+  "name": "recli",
+  "version": "0.0.1",
+  "author": "Stian Grytøyr",
+  "description": "RethinkDB query CLI",
+  "main": "index.js",
+  "preferGlobal": true,
+  "dependencies": {
+    "rethinkdb": "1.11.x",
+    "optimist": "0.6.x"
+  },
+  "devDependencies": {},
+  "bin": {
+    "recli": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stiang/recli.git"
+  },
+  "keywords": [
+    "rethinkdb",
+    "reql",
+    "database",
+    "cli"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stiang/recli/issues"
+  }
+}
