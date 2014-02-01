@@ -17,6 +17,36 @@ recli> r.table("bikes").get("123").update({foo: "bar"})
 ... (JSON output) ...
 ```
 
+The output from recli is JSON straight from RethinkDB. It is color-coded and pretty-formatted by node, 
+but other than that it is not modified in any way.
+```json
+[ { hero: 'Magneto', 
+    name: 'Max Eisenhardt', 
+    aka: ['Magnus', 'Erik Lehnsherr', 'Lehnsherr'],  
+    magazine_titles: 
+     [ 'Alpha Flight', 
+       'Avengers', 
+       'Avengers West Coast' ],
+    appearances_count: 42 },
+  { hero: 'Professor Xavier', 
+    name: 'Charles Francis Xavier', 
+    magazine_titles: 
+     [ 'Alpha Flight', 
+       'Avengers', 
+       'Bishop', 
+       'Defenders' ],
+    appearances_count: 72 },
+  { hero: 'Storm', 
+    name: 'Ororo Monroe', 
+    magazine_titles: 
+     [ 'Amazing Spider-Man vs. Wolverine', 
+       'Excalibur', 
+       'Fantastic Four', 
+       'Iron Fist'],
+    appearances_count: 72 } ]
+```
+Note that results from queries that return a cursor are automatically converted to arrays and printed as JSON documents.
+
 ### Installation
 Install recli using npm:
 ```
