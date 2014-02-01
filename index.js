@@ -32,8 +32,11 @@ exports.recli = function() {
             }
           });
         } else {
-          var cli = repl.start({prompt: "recli> ",
-                                eval:   misc.replEval});
+          var cli = repl.start({prompt:    "recli> ",
+                                eval:      misc.replEval,
+                                writer:    function(result) {
+                                  return util.inspect(result, {depth: null, colors: true});
+                                } });
           cli.context.r = r;
           cli.context.conn = conn;
           cli.context.db = opts.database;
