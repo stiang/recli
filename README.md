@@ -94,5 +94,9 @@ OPTIONAL options:
 ### Author
 Stian Grytøyr
 
+### Contributors
+* Luc Heinrich
+
+
 ### Licence
 [The MIT License](http://opensource.org/licenses/MIT)

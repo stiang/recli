@@ -1,6 +1,6 @@
 {
   "name": "recli",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "Stian Grytøyr",
   "description": "RethinkDB CLI query tool and REPL",
   "main": "index.js",
@@ -26,5 +26,15 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/stiang/recli/issues"
-  }
+  },
+  "contributors": [ 
+    {
+      "name": "Stian Grytøyr",
+      "email": "stian@grytoyr.net"
+    },
+    {
+      "name": "Luc Heinrich",
+      "email": "luc@honk-honk.com"
+    } 
+  ],
 }
