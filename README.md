@@ -19,7 +19,7 @@ recli> r.table("bikes").get("123").update({foo: "bar"})
 
 The output from recli is JSON straight from RethinkDB. It is color-coded and pretty-formatted by node, 
 but other than that it is not modified in any way.
-```json
+```js
 [ { hero: 'Magneto', 
     name: 'Max Eisenhardt', 
     aka: ['Magnus', 'Erik Lehnsherr', 'Lehnsherr'],  
