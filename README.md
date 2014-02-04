@@ -17,32 +17,32 @@ recli> r.table("bikes").get("123").update({foo: "bar"})
 ... (JSON output) ...
 ```
 
-The output from recli is JSON straight from RethinkDB. It is color-coded and pretty-formatted by node, 
+The output from recli is JSON straight from RethinkDB. It is color-coded and pretty-formatted by node,
 but other than that it is not modified in any way.
 ```js
 $ recli 'r.table("heroes")'
-[ { hero: 'Magneto', 
-    name: 'Max Eisenhardt', 
-    aka: ['Magnus', 'Erik Lehnsherr', 'Lehnsherr'],  
-    magazine_titles: 
-     [ 'Alpha Flight', 
-       'Avengers', 
+[ { hero: 'Magneto',
+    name: 'Max Eisenhardt',
+    aka: ['Magnus', 'Erik Lehnsherr', 'Lehnsherr'],
+    magazine_titles:
+     [ 'Alpha Flight',
+       'Avengers',
        'Avengers West Coast' ],
     appearances_count: 42 },
-  { hero: 'Professor Xavier', 
-    name: 'Charles Francis Xavier', 
-    magazine_titles: 
-     [ 'Alpha Flight', 
-       'Avengers', 
-       'Bishop', 
+  { hero: 'Professor Xavier',
+    name: 'Charles Francis Xavier',
+    magazine_titles:
+     [ 'Alpha Flight',
+       'Avengers',
+       'Bishop',
        'Defenders' ],
     appearances_count: 72 },
-  { hero: 'Storm', 
-    name: 'Ororo Monroe', 
-    magazine_titles: 
-     [ 'Amazing Spider-Man vs. Wolverine', 
-       'Excalibur', 
-       'Fantastic Four', 
+  { hero: 'Storm',
+    name: 'Ororo Monroe',
+    magazine_titles:
+     [ 'Amazing Spider-Man vs. Wolverine',
+       'Excalibur',
+       'Fantastic Four',
        'Iron Fist'],
     appearances_count: 72 } ]
 ```
@@ -53,7 +53,7 @@ Install recli using npm:
 ```
 sudo npm install -g recli
 ```
-This will give you a global `recli` command. If you prefer to install it locally, just drop the "sudo" and "-g". 
+This will give you a global `recli` command. If you prefer to install it locally, just drop the "sudo" and "-g".
 In that case, you can invoke it like so:
 ```
 node ./node_modules/recli
@@ -82,6 +82,8 @@ REQL EXPRESSION:
           r.table('bikes').get('123').update({foo: 'bar'})
 
 OPTIONAL options:
+    -c, --coffee               Evaluate code as CoffeeScript.
+
     -d, --database DATABASE    Default database to perform queries against.
                                Can be overridden in the ReQL expression.
                                The default is 'test'.
