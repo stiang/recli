@@ -1,5 +1,5 @@
 ## recli - RethinkDB CLI query tool and REPL
-**recli** is a command-line query tool and REPL for RethinkDB, with lots of options to control its output. It supports regular javascript syntax and CoffeeScript syntax.
+**recli** is a command-line query tool and REPL for RethinkDB, with lots of options to control its output. It supports regular JavaScript syntax and CoffeeScript syntax.
 
 ### Installation
 Install recli using npm:
@@ -113,7 +113,7 @@ $ recli -j 'r.table("heroes")'
 ]
 ```
 
-If you want raw, unformatted and unindented JSON, use the `-r`/`--raw` option. This isn’t straight-from-the-wire raw, though, it is the JSON.stringify-ed version of the RethinkDB result data (as returned by the javascript driver).
+If you want raw, unformatted and unindented JSON, use the `-r`/`--raw` option. This isn’t straight-from-the-wire raw, though, it is the JSON.stringify-ed version of the RethinkDB result data (as returned by the JavaScript driver).
 
 ### CoffeeScript input
 If you prefer to use the CoffeeScript syntax, use the `-c`/`--coffee` option:
