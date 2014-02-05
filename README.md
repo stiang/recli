@@ -98,7 +98,7 @@ Stian Grytøyr
 
 ### Contributors
 * Luc Heinrich
-
+* Marshall Cottrell
 
 ### Licence
 [The MIT License](http://opensource.org/licenses/MIT)

@@ -1,6 +1,6 @@
 {
   "name": "recli",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "Stian Grytøyr",
   "description": "RethinkDB CLI query tool and REPL",
   "main": "index.js",
@@ -8,7 +8,7 @@
   "dependencies": {
     "rethinkdb": "1.11.x",
     "optimist": "0.6.x",
-    "coffee-script": "~1.7.1"
+    "coffee-script": "1.7.x"
   },
   "devDependencies": {},
   "bin": {
@@ -36,6 +36,9 @@
     {
       "name": "Luc Heinrich",
       "email": "luc@honk-honk.com"
+    },
+    {
+      "name": "Marshall Cottrell"
     }
   ]
 }

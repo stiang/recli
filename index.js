@@ -1,6 +1,6 @@
 var r      = require('rethinkdb'),
-    coffee = require('coffee-script')
-    repl   = require('repl')
+    coffee = require('coffee-script'),
+    repl   = require('repl'),
     util   = require('util'),
     misc   = require('./lib/misc'),
     opts   = require('optimist')
@@ -46,7 +46,6 @@ exports.recli = function() {
                                 } });
           cli.context.r = r;
           cli.context.conn = conn;
-          cli.context.db = opts.database;
           cli.context.coffee = opts.coffee;
           cli.on('exit', function () {
             console.log('');
