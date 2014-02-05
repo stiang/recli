@@ -1,14 +1,20 @@
+var home = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
+var defaultConfigFile = home + '/.recli.yml';
 var r      = require('rethinkdb'),
     coffee = require('coffee-script'),
     repl   = require('repl'),
     util   = require('util'),
+    fs     = require('fs'),
+    yaml   = require('js-yaml'),
     misc   = require('./lib/misc'),
     pj     = require('./package.json');
     opts   = require('optimist')
                .boolean(['c', 'colors', 'j', 'n', 'r', 'v'])
                .default('colors', true)
+               .default('file', defaultConfigFile)
                .alias('c', 'coffee')
                .alias('d', 'database')
+               .alias('f', 'file')
                .alias('h', 'host')
                .alias('j', 'json')
                .alias('p', 'port')
@@ -34,7 +40,20 @@ exports.recli = function() {
   } else if (opts.version) {
     console.log(pj.version);
   } else {
-    if (opts.n) opts.colors = false;
+    var globalSettings = {};
+    var userSettings   = {};
+    if (opts.file) {
+      // Only load global config file if a file has not been specified
+      if (opts.file === defaultConfigFile) {
+        try {
+            globalSettings = yaml.safeLoad(fs.readFileSync('/etc/recli.yml', 'utf8'));
+        } catch (e) {}
+      }
+      try {
+          userSettings = yaml.safeLoad(fs.readFileSync(opts.file, 'utf8'));
+      } catch (e) {}
+    }
+    opts = misc.setupOptions(opts, globalSettings, userSettings);
 
     r.connect({
       host:    opts.host     || 'localhost',

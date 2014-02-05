@@ -6,14 +6,18 @@ Install recli using npm:
 ```
 sudo npm install -g recli
 ```
-This will give you a global `recli` command. If you prefer to install it locally, just drop the "sudo" and "-g".
-In that case, you can invoke it like so:
+This will give you a global `recli` command. If you prefer or need to install it locally, just drop the "sudo" and "-g". In that case, you can invoke it like so:
 ```
 node ./node_modules/recli
 ```
 or
 ```
 ./node_modules/recli/bin/recli.js
+```
+
+You can of course create an alias to be able to type "recli", as if you had recli installed globally, just put something like this in your ~/.bash_profile or equivalent:
+```
+alias recli='YOURDIR/node_modules/recli/bin/recli.js'
 ```
 
 ### Usage
@@ -149,6 +153,10 @@ OPTIONAL options:
                                Can be overridden in the ReQL expression.
                                The default is 'test'.
 
+    -f, --file FILE            Read options from the supplied YAML config
+                               file. The default is to look for a global 
+                               /etc/recli.yml and user overrides in ~/.recli.yml
+
     -h, --host HOST            Host to connect to. The default is 'localhost'.
 
     -j, --json                 Output valid, indented JSON instead of letting
@@ -163,9 +171,25 @@ OPTIONAL options:
 
     -v, --version              Print the current version of recli.
 ```
+Any options specified on the command line take precedence over defaults and configuration file settings.
 
-### TODO
-* Add support for a ~/.recli configuration file, where all options can be set
+Note that the `--coffee`, `--file`, `--json` and `--raw` options also support the `--no-<option>` syntax, like `--no-json`. This lets you override all configuration file settings.
+
+### Configuration files
+recli will look for YAML configuration files in `/etc/recli.yml` and `~/.recli.yml` by default. The user config overrides the global config. You can specify another configuration file by using the `-f`/`--file` option, in which case none of the default files are loaded.
+
+The keys and values in the configuration files must match the (long-form) options that can be used on the command line (use `true` and `false` for flags):
+```yaml
+# set default connection options
+database: mydb
+host: server1
+
+# output valid JSON by default
+json: true
+
+# prefer to use CoffeeScript input
+coffee: true
+```
 
 ### Author
 Stian Grytøyr
