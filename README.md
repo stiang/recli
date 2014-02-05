@@ -70,7 +70,7 @@ $ recli 'r.table("heroes")'
 Colors can be disabled by using the `-n`/`--no-colors` option.
 
 If you want valid JSON, but still nicely indented and readable, use the `-j`/`--json` option:
-```json
+```
 $ recli -j 'r.table("heroes")'
 [ 
   { 
@@ -159,7 +159,7 @@ OPTIONAL options:
     -p, --port PORT            TCP port to connect to. The default is 28015.
 
     -r, --raw                  Print the raw JSON from RethinkDB, with no
-                               formatting applied
+                               formatting applied.
 
     -v, --version              Print the current version of recli.
 ```
