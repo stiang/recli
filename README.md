@@ -39,7 +39,7 @@ recli> r.table("bikes").get("123").update({foo: "bar"})
 Note that results from queries that return a cursor are automatically converted to arrays and printed as JSON documents.
 
 ### Output
-The output from recli is JSON straight from RethinkDB, but it is color-coded and pretty-formatted by node. This means that it is (by default) not strictly valid JSON:
+The default output from recli is a color-coded and pretty-formatted version of the RethinkDB query result. It uses node’s util.inspect method, which means that it is actually a string representation of a Javascript object and NOT (by default) strictly valid JSON:
 ```js
 $ recli 'r.table("heroes")'
 [ { hero: 'Magneto',
@@ -67,9 +67,9 @@ $ recli 'r.table("heroes")'
        'Iron Fist' ],
     appearances_count: 72 } ]
 ```
-Colors can be disabled by using the `-n`/`--no-colors` option.
+Note that colors can be disabled by using the `-n`/`--no-colors` option.
 
-If you want valid JSON, but still nicely indented and readable, use the `-j`/`--json` option:
+If you want valid JSON instead, but still nicely indented and readable, use the `-j`/`--json` option:
 ```
 $ recli -j 'r.table("heroes")'
 [ 
@@ -163,6 +163,9 @@ OPTIONAL options:
 
     -v, --version              Print the current version of recli.
 ```
+
+### TODO
+* Add support for a ~/.recli configuration file, where all options can be set
 
 ### Author
 Stian Grytøyr
