@@ -1,6 +1,7 @@
 var home = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
 var defaultConfigFile = home + '/.recli.yml';
 var r      = require('rethinkdb'),
+    rhist  = require('repl.history'),
     coffee = require('coffee-script'),
     repl   = require('repl'),
     util   = require('util'),
@@ -91,6 +92,7 @@ exports.recli = function() {
             console.log('');
             process.exit();
           });
+          rhist(cli, home + '/.recli_history');
         }
       }
     });

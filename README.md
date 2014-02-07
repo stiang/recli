@@ -43,7 +43,7 @@ recli> r.table("bikes").get("123").update({foo: "bar"})
 Note that results from queries that return a cursor are automatically converted to arrays and printed as JSON documents.
 
 ### Output
-The default output from recli is a color-coded and pretty-formatted version of the RethinkDB query result. It uses node’s util.inspect method, which means that it is actually a string representation of a Javascript object and NOT (by default) strictly valid JSON:
+The default output from recli is a color-coded and pretty-formatted RethinkDB query result. It uses node’s util.inspect method, which means that it is actually a string representation of a Javascript object and NOT (by default) strictly valid JSON:
 ```js
 $ recli 'r.table("heroes")'
 [ { hero: 'Magneto',
@@ -159,10 +159,10 @@ OPTIONAL options:
 
     -h, --host HOST            Host to connect to. The default is 'localhost'.
 
-    -j, --json                 Output valid, indented JSON instead of letting
-                               node pretty-print the result.
+    -j, --json                 Output valid indented JSON instead of pretty-
+                               printing the result.
 
-    -n, --no-colors            Do not pretty-print with colors.
+    -n, --no-colors            Do not use colors when pretty-printing.
 
     -p, --port PORT            TCP port to connect to. The default is 28015.
 
@@ -190,6 +190,9 @@ json: true
 # prefer to use CoffeeScript input
 coffee: true
 ```
+
+### REPL history
+recli remembers commands that you run in the REPL (between sessions), which gives you access to previously run commands by pressing arrow-up. The history is stored in ~/.recli_history. There is currently no way to disable the history feature.
 
 ### Author
 Stian Grytøyr
