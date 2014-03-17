@@ -57,9 +57,9 @@ exports.recli = function() {
     opts = misc.setupOptions(opts, globalSettings, userSettings);
 
     r.connect({
-      host:    opts.host     || 'localhost',
-      port:    opts.port     || 28015,
-      db:      opts.database || 'test',
+      host:    opts.h,
+      port:    opts.p,
+      db:      opts.d,
       authKey: opts.auth
     }, function(err, conn) {
       if (err) {
