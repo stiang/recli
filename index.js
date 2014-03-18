@@ -47,19 +47,20 @@ exports.recli = function() {
       // Only load global config file if a file has not been specified
       if (opts.file === defaultConfigFile) {
         try {
-            globalSettings = yaml.safeLoad(fs.readFileSync('/etc/recli.yml', 'utf8'));
+          globalSettings = yaml.safeLoad(fs.readFileSync('/etc/recli.yml', 'utf8'));
         } catch (e) {}
       }
       try {
-          userSettings = yaml.safeLoad(fs.readFileSync(opts.file, 'utf8'));
+        userSettings = yaml.safeLoad(fs.readFileSync(opts.file, 'utf8'));
       } catch (e) {}
     }
     opts = misc.setupOptions(opts, globalSettings, userSettings);
+    console.log(opts);
 
     r.connect({
-      host:    opts.h,
-      port:    opts.p,
-      db:      opts.d,
+      host:    opts.host,
+      port:    opts.port,
+      db:      opts.database,
       authKey: opts.auth
     }, function(err, conn) {
       if (err) {
