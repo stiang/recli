@@ -200,6 +200,7 @@ Stian Grytøyr
 ### Contributors
 * Luc Heinrich
 * Marshall Cottrell
+* StreetStrider
 
 ### Licence
 [The MIT License](http://opensource.org/licenses/MIT)

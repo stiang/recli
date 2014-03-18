@@ -1,6 +1,6 @@
 {
   "name": "recli",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Stian Grytøyr",
   "description": "RethinkDB CLI query tool and REPL",
   "main": "index.js",
@@ -41,6 +41,9 @@
     },
     {
       "name": "Marshall Cottrell"
+    },
+    {
+      "name": "StreetStrider"
     }
   ]
 }
