@@ -13,14 +13,14 @@ var r      = require('rethinkdb'),
                .boolean(['c', 'colors', 'j', 'n', 'r', 'v'])
                .default('colors', true)
                .default('file', defaultConfigFile)
-               .alias('c', 'coffee')
-               .alias('d', 'database')
-               .alias('f', 'file')
-               .alias('h', 'host')
-               .alias('j', 'json')
-               .alias('p', 'port')
-               .alias('r', 'raw')
-               .alias('v', 'version')
+               .alias('coffee',   'c')
+               .alias('database', 'd')
+               .alias('file',     'f')
+               .alias('host',     'h')
+               .alias('json',     'j')
+               .alias('port',     'p')
+               .alias('raw',      'r')
+               .alias('version',  'v')
                .argv;
 
 var writer = function(rawResult) {

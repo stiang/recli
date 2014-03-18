@@ -12,7 +12,9 @@
     "js-yaml": "3.0.x",
     "repl.history": "0.1.x"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "1.12.x"
+  },
   "bin": {
     "recli": "./bin/recli.js"
   },
@@ -45,5 +47,9 @@
     {
       "name": "StreetStrider"
     }
-  ]
+  ],
+  "scripts": {
+    "test": "mocha -R spec ./test.js"
+  }
+
 }
