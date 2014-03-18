@@ -55,7 +55,6 @@ exports.recli = function() {
       } catch (e) {}
     }
     opts = misc.setupOptions(opts, globalSettings, userSettings);
-    console.log(opts);
 
     r.connect({
       host:    opts.host,
