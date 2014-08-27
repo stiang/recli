@@ -1,12 +1,12 @@
 {
   "name": "recli",
-  "version": "0.1.6",
+  "version": "0.1.14",
   "author": "Stian Grytøyr",
   "description": "RethinkDB CLI query tool and REPL",
   "main": "index.js",
   "preferGlobal": true,
   "dependencies": {
-    "rethinkdb": "1.11.x",
+    "rethinkdb": "1.14.x",
     "optimist": "0.6.x",
     "coffee-script": "1.7.x",
     "js-yaml": "3.0.x",
