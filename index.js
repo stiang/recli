@@ -74,7 +74,7 @@ exports.recli = function() {
         throw err;
       } else {
         if (opts._.length) {
-          var code = opts._[0];
+          var code = opts._.join(' ');
           if (opts.coffee) {
             code = coffee.compile(code, {bare: true});
           }
