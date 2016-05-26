@@ -5,12 +5,13 @@ var r      = require('rethinkdb'),
     coffee = require('coffee-script'),
     repl   = require('repl'),
     util   = require('util'),
+    os     = require('os'),
     fs     = require('fs'),
     yaml   = require('js-yaml'),
     misc   = require('./lib/misc'),
     pj     = require('./package.json');
     opts   = require('optimist')
-               .boolean(['c', 'colors', 'j', 'n', 'r', 'v'])
+               .boolean(['c', 'colors', 'j', 'n', 'r', 'v', 's'])
                .default('colors', true)
                .default('file', defaultConfigFile)
                .alias('coffee',   'c')
@@ -20,12 +21,19 @@ var r      = require('rethinkdb'),
                .alias('json',     'j')
                .alias('port',     'p')
                .alias('raw',      'r')
+               .alias('stream',   's')
                .alias('version',  'v')
                .argv;
 
 var writer = function(rawResult) {
   var result;
-  if (opts.raw) {
+  if (opts.stream) {
+    var i = 0;
+    result = '';
+    for (i in rawResult) {
+      result += JSON.stringify(rawResult[i]) + os.EOL;
+    }
+  } else if (opts.raw) {
     result = JSON.stringify(rawResult);
   } else if (opts.json) {
     result = JSON.stringify(rawResult, null, 2);
@@ -66,7 +74,7 @@ exports.recli = function() {
         throw err;
       } else {
         if (opts._.length) {
-          var code = opts._[0];
+          var code = opts._.join(' ');
           if (opts.coffee) {
             code = coffee.compile(code, {bare: true});
           }
