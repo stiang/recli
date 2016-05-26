@@ -11,7 +11,7 @@ var r      = require('rethinkdb'),
     misc   = require('./lib/misc'),
     pj     = require('./package.json');
     opts   = require('optimist')
-               .boolean(['c', 'colors', 'j', 'n', 'r', 'v'])
+               .boolean(['c', 'colors', 'j', 'n', 'r', 'v', 's'])
                .default('colors', true)
                .default('file', defaultConfigFile)
                .alias('coffee',   'c')
