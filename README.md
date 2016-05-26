@@ -169,6 +169,9 @@ OPTIONAL options:
     -r, --raw                  Print the raw JSON from RethinkDB, with no
                                formatting applied.
 
+    -s, --stream               Print a line break delimited JSON stream with one
+                               valid JSON object per line.
+
     -v, --version              Print the current version of recli.
 ```
 Any options specified on the command line take precedence over defaults and configuration file settings.
@@ -201,6 +204,7 @@ Stian Grytøyr
 * Luc Heinrich
 * Marshall Cottrell
 * StreetStrider
+* Howard Tyson
 
 ### Licence
 [The MIT License](http://opensource.org/licenses/MIT)
