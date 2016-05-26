@@ -1,16 +1,16 @@
 {
   "name": "recli",
-  "version": "0.1.16",
+  "version": "0.2.3",
   "author": "Stian Grytøyr",
   "description": "RethinkDB CLI query tool and REPL",
   "main": "index.js",
   "preferGlobal": true,
   "dependencies": {
-    "rethinkdb": "1.16.x",
-    "optimist": "0.6.x",
     "coffee-script": "1.7.x",
     "js-yaml": "3.0.x",
-    "repl.history": "0.1.x"
+    "optimist": "0.6.x",
+    "repl.history": "0.1.x",
+    "rethinkdb": "^2.3.1"
   },
   "devDependencies": {
     "mocha": "1.12.x"
@@ -46,6 +46,9 @@
     },
     {
       "name": "StreetStrider"
+    },
+    {
+      "name": "Howard Tyson"
     }
   ],
   "scripts": {
