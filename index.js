@@ -84,8 +84,12 @@ exports.recli = function() {
             if (e) {
               throw e;
             } else {
-              console.log(writer(result));
-              process.exit();
+              // Don't use console.log here. console.log is asynchronous so
+              // big results won't be fully written if we call process.exit
+              // too early.
+              process.stdout.write(writer(result), function() {
+                process.exit();
+              });
             }
           });
         } else {
