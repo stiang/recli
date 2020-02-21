@@ -18,6 +18,7 @@ var r      = require('rethinkdb'),
                .alias('database', 'd')
                .alias('file',     'f')
                .alias('host',     'h')
+               .alias('user',     'u')
                .alias('json',     'j')
                .alias('port',     'p')
                .alias('raw',      'r')
@@ -65,10 +66,12 @@ exports.recli = function() {
     opts = misc.setupOptions(opts, globalSettings, userSettings);
 
     r.connect({
-      host:    opts.host,
-      port:    opts.port,
-      db:      opts.database,
-      authKey: opts.auth
+      host:     opts.host,
+      port:     opts.port,
+      db:       opts.database,
+      user:     opts.user,
+      password: opts.password,
+      authKey:  opts.auth
     }, function(err, conn) {
       if (err) {
         throw err;

@@ -10,7 +10,7 @@
     "js-yaml": "3.0.x",
     "optimist": "0.6.x",
     "repl.history": "0.1.x",
-    "rethinkdb": "^2.3.1"
+    "rethinkdb": "^2.3.3"
   },
   "devDependencies": {
     "mocha": "1.12.x"
