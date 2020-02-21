@@ -7,7 +7,7 @@
   "preferGlobal": true,
   "dependencies": {
     "coffee-script": "1.7.x",
-    "js-yaml": "3.0.x",
+    "js-yaml": "3.13.x",
     "optimist": "0.6.x",
     "repl.history": "0.1.x",
     "rethinkdb": "^2.3.3"
